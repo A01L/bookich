@@ -1,0 +1,10 @@
+node_modules/
+dist/
+release/
+shots/
+*.log
+bookich-log.txt
+*.db
+*.db.tmp
+.DS_Store
+Thumbs.db

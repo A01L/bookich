@@ -1,0 +1,25 @@
+{
+  "name": "bookich",
+  "productName": "Bookich",
+  "version": "1.0.0",
+  "description": "Bookich — библиотека, редактор и ИИ-генератор книг",
+  "main": "main.js",
+  "author": "Adil",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis portable"
+  },
+  "devDependencies": {
+    "electron": "34.5.8",
+    "electron-builder": "25.1.8"
+  },
+  "build": {
+    "appId": "com.bookich.app",
+    "productName": "Bookich",
+    "directories": { "output": "dist" },
+    "files": ["main.js", "preload.js", "src/**/*", "renderer/**/*", "assets/**/*", "package.json"],
+    "win": { "target": ["nsis", "portable"], "icon": "assets/icon.ico" },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true, "shortcutName": "Bookich" }
+  }
+}
